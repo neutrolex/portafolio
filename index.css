@@ -432,6 +432,44 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+/* Animations & Fluidity */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Typing Effect */
+.typing::after {
+    content: '|';
+    animation: blink 1s step-start infinite;
+    color: var(--accent-1);
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+/* Mouse Glow Effect */
+#mouse-glow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(0, 242, 254, 0.1) 0%, rgba(0,0,0,0) 70%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 9999;
+    transition: opacity 0.3s ease;
+}
+
 /* Responsive Design */
 @media (max-width: 900px) {
     .about-container, .contact-container {

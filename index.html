@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    <div id="mouse-glow"></div>
     <nav class="navbar">
         <div class="nav-content">
             <a href="#home" class="logo">YC<span>.</span></a>
@@ -45,7 +46,7 @@
             </div>
         </section>
 
-        <section id="about" class="about">
+        <section id="about" class="about reveal">
             <h2 class="section-title">Sobre <span>mí</span></h2>
             <div class="about-container glass-card">
                 <div class="about-text">
@@ -68,7 +69,7 @@
             </div>
         </section>
 
-        <section id="skills" class="skills">
+        <section id="skills" class="skills reveal">
             <h2 class="section-title">Mis <span>Habilidades</span></h2>
             <div class="skills-grid">
                 <div class="skill-card glass-card">
@@ -103,7 +104,7 @@
             </div>
         </section>
 
-        <section id="projects" class="projects">
+        <section id="projects" class="projects reveal">
             <h2 class="section-title">Mis <span>Proyectos</span></h2>
             <div class="projects-grid">
                 <article class="project-card glass-card">
@@ -147,7 +148,7 @@
             </div>
         </section>
 
-        <section id="contact" class="contact">
+        <section id="contact" class="contact reveal">
             <h2 class="section-title">Ponte en <span>Contacto</span></h2>
             <div class="contact-container glass-card">
                 <form class="contact-form"
@@ -201,6 +202,67 @@
                 nav.style.boxShadow = 'none';
             }
         });
+
+        // Mouse Glow Effect
+        const glow = document.getElementById('mouse-glow');
+        document.addEventListener('mousemove', (e) => {
+            glow.style.left = e.clientX + 'px';
+            glow.style.top = e.clientY + 'px';
+        });
+
+        // Scroll Reveal Animation
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // Typing Effect
+        const words = ["Frontend", "Backend", "Fullstack", "UX/UI"];
+        let i = 0;
+        let timer;
+
+        function typingEffect() {
+            let word = words[i].split("");
+            var loopTyping = function() {
+                if (word.length > 0) {
+                    document.querySelector('.typing').innerHTML += word.shift();
+                } else {
+                    setTimeout(deletingEffect, 2000);
+                    return false;
+                }
+                timer = setTimeout(loopTyping, 100);
+            };
+            loopTyping();
+        }
+
+        function deletingEffect() {
+            let word = words[i].split("");
+            var loopDeleting = function() {
+                if (word.length > 0) {
+                    word.pop();
+                    document.querySelector('.typing').innerHTML = word.join("");
+                } else {
+                    if (words.length > (i + 1)) {
+                        i++;
+                    } else {
+                        i = 0;
+                    }
+                    typingEffect();
+                    return false;
+                }
+                timer = setTimeout(loopDeleting, 50);
+            };
+            loopDeleting();
+        }
+
+        typingEffect();
     </script>
 </body>
 
