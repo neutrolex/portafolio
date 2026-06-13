@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yordy Campos Nolasco - Portafolio</title>
+    <meta name="description" content="Portafolio profesional de Yordy Campos Nolasco. Desarrollador de Software.">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="#home" class="logo">YC<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#about">Sobre mí</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <span class="greeting">Hola, soy</span>
+                <h1 class="glitch" data-text="Yordy Campos Nolasco">Yordy Campos Nolasco</h1>
+                <h2 class="role">Desarrollador de Software <span class="typing"></span></h2>
+                <p class="summary">
+                    Apasionado por crear soluciones tecnológicas innovadoras, escalables y con diseños excepcionales.
+                    Transformando ideas en experiencias digitales impactantes.
+                </p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn primary">Ver mis proyectos</a>
+                    <a href="#contact" class="btn secondary">Contáctame</a>
+                </div>
+            </div>
+            <div class="hero-shape">
+                <div class="shape blob-1"></div>
+                <div class="shape blob-2"></div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <h2 class="section-title">Sobre <span>mí</span></h2>
+            <div class="about-container glass-card">
+                <div class="about-text">
+                    <p>Soy un desarrollador enfocado en construir productos que no solo funcionen perfectamente, sino
+                        que también ofrezcan una experiencia de usuario increíble. Me encanta enfrentar nuevos retos y
+                        mantenerme actualizado con las últimas tecnologías del mercado.</p>
+                    <p>Mi enfoque combina una sólida base técnica con una gran atención al detalle visual, asegurando
+                        resultados de la más alta calidad.</p>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-num">+3</span>
+                        <span class="stat-text">Años de experiencia</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">+20</span>
+                        <span class="stat-text">Proyectos completados</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills">
+            <h2 class="section-title">Mis <span>Habilidades</span></h2>
+            <div class="skills-grid">
+                <div class="skill-card glass-card">
+                    <h3>Frontend</h3>
+                    <div class="tags">
+                        <span>HTML5</span>
+                        <span>CSS3 / SCSS</span>
+                        <span>JavaScript (ES6+)</span>
+                        <span>React</span>
+                        <span>Vue.js</span>
+                    </div>
+                </div>
+                <div class="skill-card glass-card">
+                    <h3>Backend</h3>
+                    <div class="tags">
+                        <span>Node.js</span>
+                        <span>Python</span>
+                        <span>SQL</span>
+                        <span>NoSQL</span>
+                        <span>APIs REST</span>
+                    </div>
+                </div>
+                <div class="skill-card glass-card">
+                    <h3>Herramientas</h3>
+                    <div class="tags">
+                        <span>Git & GitHub</span>
+                        <span>Docker</span>
+                        <span>Figma</span>
+                        <span>AWS</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <h2 class="section-title">Mis <span>Proyectos</span></h2>
+            <div class="projects-grid">
+                <article class="project-card glass-card">
+                    <div class="project-img placeholder-gradient-1"></div>
+                    <div class="project-info">
+                        <h3>Plataforma E-commerce</h3>
+                        <p>Una tienda en línea moderna con carrito de compras en tiempo real, pasarela de pagos y panel
+                            de administración.</p>
+                        <div class="tags">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>Stripe</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card glass-card">
+                    <div class="project-img placeholder-gradient-2"></div>
+                    <div class="project-info">
+                        <h3>App de Gestión de Tareas</h3>
+                        <p>Aplicación de productividad con tableros Kanban, recordatorios y colaboración en equipo.</p>
+                        <div class="tags">
+                            <span>Vue.js</span>
+                            <span>Firebase</span>
+                            <span>Tailwind</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card glass-card">
+                    <div class="project-img placeholder-gradient-3"></div>
+                    <div class="project-info">
+                        <h3>Dashboard Analítico</h3>
+                        <p>Panel de control para visualización de datos en tiempo real con gráficos interactivos y
+                            reportes exportables.</p>
+                        <div class="tags">
+                            <span>Python</span>
+                            <span>Django</span>
+                            <span>D3.js</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2 class="section-title">Ponte en <span>Contacto</span></h2>
+            <div class="contact-container glass-card">
+                <form class="contact-form"
+                    onsubmit="event.preventDefault(); alert('¡Gracias por tu mensaje! Me pondré en contacto pronto.');">
+                    <div class="form-group">
+                        <input type="text" id="name" required placeholder="Tu Nombre">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" required placeholder="Tu Correo Electrónico">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="5" required placeholder="¿En qué puedo ayudarte?"></textarea>
+                    </div>
+                    <button type="submit" class="btn primary">Enviar Mensaje</button>
+                </form>
+                <div class="contact-info">
+                    <p>También puedes encontrarme en:</p>
+                    <div class="social-links">
+                        <a href="#" class="social-btn">LinkedIn</a>
+                        <a href="#" class="social-btn">GitHub</a>
+                        <a href="#" class="social-btn">Twitter</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Yordy Campos Nolasco. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling para la navegación
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Efecto de navbar al hacer scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                nav.style.background = 'rgba(10, 10, 10, 0.9)';
+                nav.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.1)';
+            } else {
+                nav.style.background = 'rgba(10, 10, 10, 0.5)';
+                nav.style.boxShadow = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>
